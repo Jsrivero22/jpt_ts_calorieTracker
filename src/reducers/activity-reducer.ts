@@ -57,7 +57,12 @@ export const activityReducer = (
         }
     }
 
-    if ( action.type === 'restare-app' ) return initialState;
+    if ( action.type === 'restare-app' ) {
+        return {
+            activities: [],
+            activeId: ''
+        }
+    }
 
     return state;
 }
